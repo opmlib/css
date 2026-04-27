@@ -4,7 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(res => res.text())
     .then(html => {
 
-      document.getElementById("toggle-container").innerHTML = html;
+      const container = document.getElementById("toggle-container");
+      if (!container) return;
+
+      container.innerHTML = html;
 
       const toggle = document.getElementById("input");
       if (toggle) {
@@ -13,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
 
-    })
-    .catch(err => console.error("Toggle failed to load:", err));
+    });
 
 });
