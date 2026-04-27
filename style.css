@@ -961,3 +961,235 @@
           transform: scale(1);
         }
       }
+/* =========================
+   WORDPRESS + SPECTRA BRIDGE
+========================= */
+
+/* Page content wrapper */
+.opm-content {
+  width: 100%;
+}
+
+/* WordPress content spacing */
+.opm-content > * {
+  margin-bottom: 28px;
+}
+
+/* Sections / containers */
+.section,
+.wp-block-group,
+.wp-block-cover,
+.uagb-container {
+  margin-bottom: 28px;
+}
+
+/* Titles */
+.section__title,
+.wp-block-heading,
+.uagb-heading-text {
+  font-size: var(--fs-title);
+  margin-bottom: 12px;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+/* Paragraphs */
+.section__subtitle,
+.wp-block-paragraph,
+.uagb-desc-text,
+.wp-block-group p,
+.uagb-container p {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+/* Cards */
+.card,
+.uagb-infobox,
+.uagb-container.card,
+.wp-block-group.card,
+.wp-block-column.card {
+  background: var(--bg);
+  border: var(--line);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+/* Card hover */
+.card:hover,
+.uagb-infobox:hover,
+.wp-block-group.card:hover,
+.wp-block-column.card:hover {
+  border: var(--hoverline);
+  box-shadow: var(--hover-shadow);
+}
+
+/* Buttons */
+.btn,
+.wp-block-button__link,
+.uagb-buttons-repeater,
+.uagb-button__link {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: var(--fs-menu);
+  padding: 8px 12px;
+  border: var(--line);
+  border-radius: 999px;
+  background: var(--card-bg);
+  color: var(--text) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: 0.2s ease;
+  box-shadow: none;
+}
+
+/* Button hover */
+.btn:hover,
+.wp-block-button__link:hover,
+.uagb-buttons-repeater:hover,
+.uagb-button__link:hover {
+  background: var(--bg);
+  box-shadow: var(--hover-shadow);
+}
+
+/* Primary / gradient buttons */
+.btn--gradient,
+.wp-block-button.is-style-fill .wp-block-button__link,
+.uagb-buttons-repeater.uagb-button__wrapper .uagb-button__link {
+  background: var(--gradient);
+  border: var(--gradient-border);
+  color: rgb(61, 72, 82) !important;
+}
+
+/* Full width buttons */
+.btn--full,
+.wp-block-button.btn--full,
+.wp-block-button.btn--full .wp-block-button__link {
+  width: 100%;
+}
+
+/* Button wrapper spacing */
+.wp-block-buttons,
+.uagb-buttons__outer-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* Columns */
+.form-row,
+.wp-block-columns,
+.uagb-columns__wrap,
+.uagb-container.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* 3-column layout */
+.form-row--3,
+.cards-grid,
+.wp-block-columns.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* 4-column layout */
+.form-row--4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* Fix WordPress columns */
+.wp-block-column {
+  min-width: 0;
+}
+
+/* Badges / tags */
+.badge,
+.wp-block-button.badge .wp-block-button__link {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #eee;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  font-size: var(--fs-menu);
+  color: var(--darktext) !important;
+}
+
+/* Dividers */
+.divider,
+.wp-block-separator {
+  border: 0;
+  border-top: var(--line);
+  margin: 20px 0;
+}
+
+/* Images */
+.wp-block-image img,
+.uagb-container img,
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Hero section */
+.hero-section {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Align hero content */
+.hero-section .wp-block-heading,
+.hero-section p {
+  max-width: 720px;
+}
+
+/* Right sidebar cards */
+.main__right .wp-block-group,
+.main__right .uagb-container {
+  background: var(--bg);
+  border: var(--line);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+/* Links */
+.opm-content a,
+.main__left a,
+.main__right a {
+  color: var(--text);
+}
+
+/* Remove unwanted WordPress block spacing */
+.wp-block-group,
+.wp-block-columns,
+.wp-block-buttons {
+  margin-top: 0;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .form-row,
+  .form-row--3,
+  .form-row--4,
+  .cards-grid,
+  .wp-block-columns,
+  .uagb-columns__wrap {
+    grid-template-columns: 1fr;
+  }
+}
